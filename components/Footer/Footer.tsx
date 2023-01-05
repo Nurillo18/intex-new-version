@@ -4,27 +4,27 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-bg_main mt-8 sm:mt-12">
-      <div className="max-w-container w-full mx-auto pt-14 px-5 ">
-        <div className="sm:grid sm:grid-cols-2 sm:gap-y-10 tablet:flex tablet:justify-between pb-4 ">
-          <div className="max-w-281 w-full">
-            <Link href={"/"}>
+    <footer id="contact" className="w-full bg-footerBgColor pt-[50px] pb-[30px]">
+      <div className="container">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[34px] lg:gap-[74px] w-11/12 sm:w-full">
+          <div>
+            <Link href={"/"} className="block py-[5px]">
               <Image
-                src={`/Assets/Images/FooterSvg/FooterLogo.svg`}
+                src={`/Images/Footer_imgs/FooterLogo.svg`}
                 width={164}
                 height={16}
                 alt="site_logo"
               />
             </Link>
-            <p className="mt-7 text-base text-gray-foot">
+            <p className="my-6 hidden sm:block">
               Бассейны от intex - доступная по цене, качественная, надежная и
               экологически чистая продукция, которая предназначена для приятного
               отдыха всей семьи
             </p>
-            <div className=" max-w-237 px-1 mt-7 flex justify-between ">
+            <div className="max-w-[237px] p-[6px] flex justify-between mt-6 sm:mt-0">
               <Link href="https://www.facebook.com/" target="blank">
                 <Image
-                  src={`/Assets/Images/FooterSvg/facebook.svg`}
+                  src={`/Images/Footer_imgs/facebook.svg`}
                   className="w-9 h-9 hover:scale-105 transition-all"
                   width={36}
                   height={36}
@@ -36,7 +36,7 @@ const Footer = () => {
                 target="blank"
               >
                 <Image
-                  src={`/Assets/Images/FooterSvg/Linkedin.svg`}
+                  src={`/Images/Footer_imgs/Linkedin.svg`}
                   className="w-9 h-9 hover:scale-105 transition-all"
                   width={36}
                   height={36}
@@ -45,7 +45,7 @@ const Footer = () => {
               </Link>
               <Link href="https://www.instagram.com/" target="blank">
                 <Image
-                  src={`/Assets/Images/FooterSvg/Instagram.svg`}
+                  src={`/Images/Footer_imgs/Instagram.svg`}
                   className="w-9 h-9 hover:scale-105 transition-all"
                   width={36}
                   height={36}
@@ -54,7 +54,7 @@ const Footer = () => {
               </Link>
               <Link href="https://twitter.com/" target="blank">
                 <Image
-                  src={`/Assets/Images/FooterSvg/Twitter.svg`}
+                  src={`/Images/Footer_imgs/Twitter.svg`}
                   className="w-9 h-9 hover:scale-105 transition-all"
                   width={36}
                   height={36}
@@ -63,82 +63,86 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className=" mt-6 sm:mt-0">
-            <p className="text-black-black_dark font-bold text-lg">
-              Полезные ссылки
-            </p>
-            <ul className="text-sm text-gray-foot mt-4 tablet:mt-6 h-207 tablet:h-237 flex flex-col justify-between">
+          <div className="lg:pl-10 hidden sm:block">
+            <p className="font-bold text-textColor text-lg">Полезные ссылки</p>
+            <ul className="space-y-3 mt-6">
               <li>
-                <Link className="cursor-pointer" href="#">
-                  О Продукт
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
+                  O Продукт
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer" href="#">
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
                   Почему мы?
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer" href="#">
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
                   Контакты
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer" href="#">
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
                   Категории
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer" href="#">
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
                   Популярное
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer" href="#">
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
                   Новинки
                 </Link>
               </li>
               <li>
-                <Link className="cursor-pointer" href="#">
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
                   На скидке
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="max-w-237 mt-6 sm:mt-0">
-            <p className="text-black-black_dark font-bold text-lg">
-              Центр помощи
-            </p>
-            <ul className=" text-sm text-gray-foot mt-4 tablet:mt-6 h-83 tablet:h-93 flex flex-col justify-between">
+          <div className="hidden sm:block">
+            <p className="font-bold text-textColor text-lg">Центр помощи</p>
+            <ul className="space-y-3 mt-6">
               <li>
-                <Link href="#">Доставка и оплата</Link>
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
+                  Доставка и оплата
+                </Link>
               </li>
               <li>
-                <Link href="#">Часто задаваемые вопросы</Link>
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
+                  Часто задаваемые вопросы
+                </Link>
               </li>
               <li>
-                <Link href="#">Политика конфиденциальности</Link>
+                <Link href="/" className="font-medium text-footerLinkColor text-sm">
+                  Политика конфиденциальности
+                </Link>
               </li>
             </ul>
           </div>
-          <div className=" mt-6 sm:mt-0">
-            <p className="text-black-black_dark font-bold text-lg">Адрес</p>
-            <div className=" h-135 tablet:h-153 mt-4 tablet:mt-6 flex flex-col justify-between ">
-              <div className=" flex max-w-290">
+          <div>
+            <p className="text-black-black_dark font-bold text-lg">
+              Адрес
+            </p>
+            <ul className="space-y-3 mt-6">
+              <li className="flex items-start">
                 <Image
-                  src={`/Assets/Images/FooterSvg/Location.svg`}
+                  src={`/Images/Footer_imgs/Location.svg`}
                   className="w-5 h-6"
                   width={18}
                   height={23}
                   alt="Location"
                 />
-                <address className="pl-1 text-sm  text-gray-foot not-italic">
+                <address className="pl-2 text-sm  text-footerLinkColor not-italic">
                   Улица Пахлавона Махмуда, Яшнабадский район, город Ташкент
                 </address>
-              </div>
-              <div className="flex">
+              </li>
+              <li className="flex items-start">
                 <Image
-                  src={`/Assets/Images/FooterSvg/Phone.svg`}
+                  src={`/Images/Footer_imgs/Phone.svg`}
                   className="w-5 h-5"
                   width={18}
                   height={19}
@@ -146,14 +150,14 @@ const Footer = () => {
                 />
                 <a
                   href="tel:+998901288182"
-                  className="text-sm pl-1 text-gray-foot"
+                  className="text-sm pl-2 text-footerLinkColor"
                 >
                   +998 (90) 128 81 82
                 </a>
-              </div>
-              <div className="flex">
+              </li>
+              <li className="flex items-start">
                 <Image
-                  src={`/Assets/Images/FooterSvg/Message.svg`}
+                  src={`/Images/Footer_imgs/Message.svg`}
                   className="w-5 h-5"
                   width={18}
                   height={19}
@@ -161,33 +165,28 @@ const Footer = () => {
                 />
                 <a
                   href="mailto:Intex@gmail.com"
-                  className="text-sm pl-1 text-gray-foot"
+                  className="text-sm pl-2 text-footerLinkColor"
                 >
                   Intex@gmail.com
                 </a>
-              </div>
-              <div className="flex">
+              </li>
+              <li className="flex items-start">
                 <Image
-                  src={`/Assets/Images/FooterSvg/Clock.svg`}
+                  src={`/Images/Footer_imgs/Clock.svg`}
                   className="w-5 h-5"
                   width={18}
                   height={19}
                   alt="Clock"
                 />
-                <p className="text-sm pl-1 text-gray-foot">
-                  <time>10:00</time> - <time>22:00</time> Без выходных
+                <p className="text-sm pl-2 text-footerLinkColor">
+                  10:00 - 22:00 Без выходных
                 </p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <div>
-          <hr className="w-full bg-gray-200 h-0.5" />
-          <p className="text-gray-foot pt-4 pb-10 sm:py-7">
-            INTEX-MARKET © 2022, Разработано в Support Solutions Все права
-            защищены.
-          </p>
-        </div>
+        <span className="block w-full h-[2px] bg-[#F2F2F2] my-4 sm:mt-[15px] sm:mb-[30px]"></span>
+        <p className="text-sm text-footerLinkColor">INTEX-MARKET © 2022, Разработано в Support Solutions Все права защищены.</p>
       </div>
     </footer>
   );
