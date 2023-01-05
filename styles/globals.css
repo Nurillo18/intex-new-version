@@ -66,3 +66,26 @@ a {
   transform: rotate(180deg);
   transition: transform 0.4s;
 }
+.items-lang:nth-child(1) {
+  background-image: url("../public/Images/Header_Imgs/uzb-flag.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 20px;
+  background-position-x: 10px;
+  background-position-y: 13px;
+}
+
+.items-lang:nth-child(2) {
+  background-image: url("../public/Images/Header_Imgs/usa-flag.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 20px;
+  background-position-x: 10px;
+  background-position-y: 8px;
+}
+
+.items-lang:nth-child(3) {
+  background-image: url("../public/Images/Header_Imgs/ru-flag.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 20px;
+  background-position-x: 11px;
+  background-position-y: 2px;
+}
