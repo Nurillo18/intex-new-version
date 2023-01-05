@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import HeaderMenu from "../Modals/HeaderMenu/HeaderMenu";
 
 function Header() {
   return (
@@ -153,6 +154,7 @@ function Header() {
           </div>
         </div>
       </div>
+      <HeaderMenu />
     </header>
   );
 }
