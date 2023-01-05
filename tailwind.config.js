@@ -7,6 +7,15 @@ module.exports = {
         headerColor: "#7A7E80",
         darkBlue: "#109EF4",
       },
+      backgroundImage: {
+        searchIcon: "url(../public/Images/Header_Imgs/search-icon.svg)",
+      },
+      backgroundColor: {
+        headerBg: "#FAFAFA",
+      },
+      margin: {
+        120: "120px",
+      },
     },
   },
   plugins: [],
