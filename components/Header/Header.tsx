@@ -1,9 +1,11 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import HeaderMenu from "../Modals/HeaderMenu/HeaderMenu";
+import LanguageModal from "../Modals/LanguageModal/LanguageModal";
 
 function Header() {
+  const [clickMenu, setClickMenu] = useState(false);
   return (
     <header className="bg-headerBg">
       <div className="py-4 sm:py-3 border-b-2">
@@ -112,6 +114,7 @@ function Header() {
           </div>
           <div className="flex items-center w-full md:w-auto justify-between md:justify-start space-x-5">
             <Image
+              onClick={() => setClickMenu(!clickMenu)}
               className="flex sm:hidden w-[26px] h-[19px]"
               src={"/Images/Header_Imgs/hamburger.svg"}
               width={26}
@@ -139,12 +142,9 @@ function Header() {
                 alt="Korzina Icon"
               />
             </button>
-            <div className=" hidden sm:flex items-center space-x-2.5 bg-white py-2.5 pl-[5px] pr-[8px] rounded-[5px]">
-              <Image src={"/Images/Header_Imgs/ru-flag.svg"} width={28} height={20} alt="Ru Flag" />
-              <span>Ru</span>
-              <Image src={"/Images/Header_Imgs/down-icon.svg"} width={9} height={5} alt="Ru Flag" />
-            </div>
+            <LanguageModal />
             <Image
+              onClick={() => setClickMenu(!clickMenu)}
               className="hidden sm:flex xl:hidden w-[26px] h-[19px]"
               src={"/Images/Header_Imgs/hamburger.svg"}
               width={26}
@@ -154,7 +154,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <HeaderMenu />
+      <HeaderMenu clickMenu={clickMenu} setClickMenu={setClickMenu} />
     </header>
   );
 }
