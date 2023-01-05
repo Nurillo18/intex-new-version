@@ -56,3 +56,13 @@ a {
   margin: 0 auto;
   padding: 0 16px;
 }
+.category-item:hover > .drop-down{
+  height: 128px;
+  width: 210px;
+  opacity: 1;
+  transition: height 0.2s;
+}
+.category-item:hover > .category-link > .drop-img{
+  transform: rotate(180deg);
+  transition: transform 0.4s;
+}
